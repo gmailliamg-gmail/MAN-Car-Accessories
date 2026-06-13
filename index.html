@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAN Car Accessories | Wholesale | Premium Automotive Parts Supplier Egypt</title>
+    <meta name="description" content="Wholesale supplier of premium car accessories in Egypt. Importing from China and manufacturing locally. Bulk orders only. Register as a company to access wholesale prices.">
+    <meta name="keywords" content="wholesale car accessories, wholesale car parts, automotive supplier Egypt, Chinese car accessories Egypt, leather car accessories manufacturer">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Playfair Display', 'Segoe UI', Georgia, serif; background: #0A0A0A; color: #FFFFFF; line-height: 1.6; }
+        
+        /* Hero Section with Luxury SUV Background */
+        .hero { height: 100vh; background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 100%), url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1920&q=80'); background-size: cover; background-position: center 30%; background-attachment: fixed; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(45deg, rgba(212,175,55,0.02) 0px, rgba(212,175,55,0.02) 2px, transparent 2px, transparent 8px); pointer-events: none; }
+        
+        /* Header */
+        .header { position: fixed; top: 0; width: 100%; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(12px); padding: 12px 40px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
+        
+        /* CLICKABLE LOGO WITH 180 DEGREE TEXT AND CAR BACKGROUND */
+        .logo-wrapper { cursor: pointer; position: relative; transition: transform 0.3s ease; }
+        .logo-wrapper:hover { transform: scale(1.02); }
+        
+        .luxury-badge {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #1A1A1A, #0A0A0A);
+            border: 2px solid #D4AF37;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            overflow: hidden;
+        }
+        
+        /* Car background image inside the badge */
+        .luxury-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=150&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: 0;
+        }
+        
+        /* Gold inner ring */
+        .luxury-badge::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        /* Circular text - MAN written along the edge (180 degrees) */
+        .circular-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            animation: rotateText 20s linear infinite;
+            z-index: 2;
+        }
+        
+        .circular-text svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .circular-text text {
+            fill: #D4AF37;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        @keyframes rotateText {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Center MAN text */
+        .center-man {
+            position: absolute;
+            z-index: 3;
+            font-size: 20px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #D4AF37, #FFD700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 2px;
+        }
+        
+        .logo-badge {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .nav { display: flex; gap: 30px; align-items: center; flex-wrap: wrap; }
+        .nav a { color: #EAEAEA; text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.2s; cursor: pointer; }
+        .nav a:hover { color: #D4AF37; }
+        .cart-count { background: #D4AF37; color: #0A0A0A; border-radius: 50%; padding: 2px 8px; font-size: 10px; font-weight: bold; margin-left: 6px; }
+        
+        /* Wholesale Badge on Header */
+        .wholesale-badge {
+            background: #D4AF37;
+            color: #0A0A0A;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-left: 15px;
+        }
+        
+        /* Hero Content */
+        .hero-content { position: absolute; bottom: 15%; left: 0; right: 0; text-align: center; padding: 0 20px; }
+        .hero-badge { font-size: 12px; letter-spacing: 5px; color: #D4AF37; margin-bottom: 20px; text-transform: uppercase; }
+        .hero h1 { font-size: 72px; font-weight: 700; letter-spacing: 4px; margin-bottom: 15px; }
+        .hero h1 span { color: #D4AF37; }
+        .hero p { font-size: 18px; letter-spacing: 2px; opacity: 0.8; margin-bottom: 35px; }
+        .btn-primary { background: transparent; border: 2px solid #D4AF37; padding: 14px 48px; font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #D4AF37; cursor: pointer; transition: all 0.4s; margin: 0 10px; }
+        .btn-primary:hover { background: #D4AF37; color: #0A0A0A; transform: translateY(-3px); }
+        .btn-wholesale { background: #D4AF37; color: #0A0A0A; }
+        .btn-wholesale:hover { background: #FFD700; }
+        
+        /* Section Styles */
+        .section { padding: 80px 50px; }
+        .section-dark { background: #0F0F0F; }
+        .section-title { text-align: center; font-size: 42px; font-weight: 600; margin-bottom: 20px; }
+        .section-title span { color: #D4AF37; }
+        .section-subtitle { text-align: center; color: #D4AF37; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; }
+        .divider { width: 70px; height: 2px; background: #D4AF37; margin: 25px auto 0; }
+        
+        /* Products Grid - Wholesale Style */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; max-width: 1400px; margin: 0 auto; }
+        .product-card { background: #121212; border-radius: 16px; overflow: hidden; transition: all 0.4s; border: 1px solid #222; position: relative; }
+        .product-card:hover { transform: translateY(-8px); border-color: #D4AF37; box-shadow: 0 25px 45px rgba(0,0,0,0.5); }
+        .product-icon { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 80px; background: linear-gradient(145deg, #161616, #0E0E0E); }
+        .product-info { padding: 20px; }
+        .product-cat { font-size: 10px; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+        .product-title { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+        .product-desc { font-size: 12px; color: #888; margin-bottom: 12px; line-height: 1.4; }
+        
+        /* Wholesale Price Display */
+        .wholesale-price { background: #1A1A1A; padding: 12px; border-radius: 8px; margin: 12px 0; }
+        .wholesale-price .price-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px; }
+        .wholesale-price .price-row .qty { color: #D4AF37; font-weight: 600; }
+        .wholesale-price .price-row .amount { color: #FFD700; }
+        .product-price { font-size: 22px; font-weight: 700; color: #D4AF37; margin-bottom: 10px; }
+        .moq-badge { position: absolute; top: 15px; right: 15px; background: #D4AF37; color: #0A0A0A; padding: 4px 12px; border-radius: 20px; font-size: 10px; font-weight: 800; }
+        
+        .btn-add { width: 100%; background: transparent; border: 1px solid #D4AF37; padding: 10px; color: #D4AF37; font-weight: 600; cursor: pointer; transition: all 0.3s; text-transform: uppercase; font-size: 12px; border-radius: 8px; margin-bottom: 8px; }
+        .btn-add:hover { background: #D4AF37; color: #0A0A0A; }
+        .btn-quote { background: #1877F2; border: none; color: white; }
+        .btn-quote:hover { background: #0D6EFD; color: white; }
+        
+        /* Modal for Vision & Mission */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: linear-gradient(145deg, #121212, #0A0A0A);
+            border: 2px solid #D4AF37;
+            border-radius: 30px;
+            padding: 50px;
+            max-width: 700px;
+            width: 90%;
+            position: relative;
+            animation: modalFadeIn 0.4s ease;
+        }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #D4AF37;
+        }
+        .modal h2 { color: #D4AF37; margin-bottom: 20px; text-align: center; }
+        .modal h3 { color: #D4AF37; margin: 25px 0 15px 0; }
+        .modal p { color: #aaa; line-height: 1.8; margin-bottom: 15px; }
+        .vision-mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .vm-card { background: #1A1A1A; padding: 20px; border-radius: 16px; border-left: 3px solid #D4AF37; }
+        
+        @media (max-width: 768px) {
+            .vision-mission-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Companies Register Section */
+        .companies-register-section { background: #0A0A0A; padding: 60px 50px; border-top: 1px solid #D4AF37; border-bottom: 1px solid #D4AF37; }
+        .register-form { max-width: 600px; margin: 40px auto 0; }
+        .register-form input, .register-form select, .register-form textarea { width: 100%; padding: 14px; margin-bottom: 15px; background: #1A1A1A; border: 1px solid #333; color: white; border-radius: 8px; }
+        .register-form input:focus, .register-form select:focus { border-color: #D4AF37; outline: none; }
+        
+        /* Stats Section */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1000px; margin: 40px auto 0; text-align: center; }
+        .stat-number { font-size: 48px; font-weight: 800; color: #D4AF37; }
+        .stat-label { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; }
+        
+        /* Cart & Checkout */
+        .cart-container, .checkout-container, .tracking-container { max-width: 1100px; margin: 120px auto 80px; padding: 0 20px; }
+        .cart-header { display: grid; grid-template-columns: 3fr 1fr 1.5fr 1fr 0.5fr; padding: 18px 0; border-bottom: 1px solid #D4AF37; font-size: 12px; text-transform: uppercase; color: #D4AF37; }
+        .cart-item { display: grid; grid-template-columns: 3fr 1fr 1.5fr 1fr 0.5fr; align-items: center; padding: 20px 0; border-bottom: 1px solid #222; }
+        .cart-product { display: flex; align-items: center; gap: 15px; }
+        .cart-img { width: 60px; height: 60px; background: #1A1A1A; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 30px; }
+        .qty-control { display: flex; align-items: center; gap: 12px; }
+        .qty-btn { background: #222; border: none; width: 28px; height: 28px; color: white; cursor: pointer; border-radius: 5px; }
+        .remove-btn { background: none; border: none; color: #ff5555; cursor: pointer; font-size: 18px; }
+        .cart-summary { margin-top: 30px; text-align: right; padding: 25px; background: #111; border-radius: 12px; }
+        .cart-total { font-size: 24px; font-weight: 700; margin-bottom: 20px; }
+        
+        .checkout-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
+        .order-summary { background: #111; padding: 25px; border-radius: 16px; height: fit-content; }
+        .checkout-form input, .checkout-form select { width: 100%; padding: 14px; margin-bottom: 15px; background: #1A1A1A; border: 1px solid #333; color: white; border-radius: 8px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .payment-opt { display: flex; align-items: center; gap: 12px; padding: 12px; background: #1A1A1A; margin-bottom: 8px; border-radius: 8px; cursor: pointer; }
+        .payment-opt.selected { border: 1px solid #D4AF37; background: rgba(212,175,55,0.1); }
+        
+        .tracking-card { background: #111; padding: 40px; border-radius: 20px; }
+        .tracking-input { display: flex; gap: 15px; margin: 30px 0; }
+        .tracking-input input { flex: 1; padding: 15px; background: #1A1A1A; border: 1px solid #333; color: white; border-radius: 8px; }
+        .timeline { display: flex; justify-content: space-between; margin-top: 40px; position: relative; }
+        .timeline:before { content: ''; position: absolute; top: 24px; left: 10%; right: 10%; height: 2px; background: #333; }
+        .step { text-align: center; flex: 1; position: relative; z-index: 1; }
+        .step-dot { width: 48px; height: 48px; background: #222; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .step.active .step-dot { background: #D4AF37; color: #0A0A0A; }
+        
+        .footer { background: #080808; padding: 50px 50px 30px; border-top: 1px solid #D4AF37; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { color: #D4AF37; margin-bottom: 20px; font-size: 14px; letter-spacing: 2px; }
+        .footer-col a { display: block; color: #888; text-decoration: none; margin-bottom: 10px; font-size: 13px; cursor: pointer; }
+        .footer-col a:hover { color: #D4AF37; }
+        .copyright { text-align: center; padding-top: 30px; border-top: 1px solid #222; font-size: 11px; color: #555; }
+        
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; cursor: pointer; z-index: 100; box-shadow: 0 5px 20px rgba(37,211,102,0.3); }
+        .toast { position: fixed; bottom: 95px; right: 25px; background: #D4AF37; color: #0A0A0A; padding: 12px 24px; border-radius: 8px; font-weight: bold; z-index: 200; animation: slideIn 0.3s ease; }
+        
+        @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        
+        @media (max-width: 968px) {
+            .header { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            .nav { gap: 20px; justify-content: center; }
+            .hero h1 { font-size: 42px; }
+            .section { padding: 50px 20px; }
+            .checkout-grid { grid-template-columns: 1fr; }
+            .cart-header { display: none; }
+            .cart-item { grid-template-columns: 1fr; gap: 12px; text-align: center; }
+            .cart-product { justify-content: center; }
+            .timeline { flex-direction: column; gap: 15px; }
+            .timeline:before { display: none; }
+            .products-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-badge">
+        <!-- CLICKABLE LOGO WITH 180 DEGREE "MAN" TEXT AND CAR BACKGROUND -->
+        <div class="logo-wrapper" onclick="openVisionModal()">
+            <div class="luxury-badge">
+                <div class="circular-text">
+                    <svg viewBox="0 0 100 100">
+                        <path id="circlePath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+                        <text font-family="'Playfair Display', serif" font-weight="700" fill="#D4AF37" font-size="11" letter-spacing="3">
+                            <textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+                                MAN · CAR ACCESSORIES · MAN · CAR ACCESSORIES
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <div class="center-man">MAN</div>
+            </div>
+        </div>
+        <span class="wholesale-badge">WHOLESALE</span>
+    </div>
+    <div class="nav">
+        <a onclick="showPage('home')">HOME</a>
+        <a onclick="showPage('shop')">PRODUCTS</a>
+        <a onclick="showPage('cart')">CART (<span id="cartCount">0</span>)</a>
+        <a onclick="showPage('quote')">REQUEST QUOTE</a>
+        <a onclick="showPage('tracking')">TRACK</a>
+        <a onclick="showPage('register')">COMPANIES REGISTER</a>
+        <a onclick="switchToArabic()">🇸🇦 العربية</a>
+    </div>
+</header>
+
+<!-- VISION & MISSION MODAL - Side by side layout -->
+<div id="visionModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeVisionModal()">&times;</span>
+        <h2>MAN CAR ACCESSORIES</h2>
+        <div class="vision-mission-grid">
+            <div class="vm-card">
+                <h3>✨ OUR VISION</h3>
+                <p>To become the leading wholesale supplier of premium car accessories in Egypt and the Middle East, bridging Chinese manufacturing excellence with Egyptian craftsmanship.</p>
+            </div>
+            <div class="vm-card">
+                <h3>🎯 OUR MISSION</h3>
+                <p>To provide businesses with high-quality automotive accessories at competitive wholesale prices by importing premium products from China and manufacturing locally in Egypt using the finest materials like genuine leather.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HOME PAGE -->
+<div id="homePage">
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">WHOLESALE SUPPLIER</div>
+            <h1>MAN <span>CAR ACCESSORIES</span></h1>
+            <p>Premium Automotive Parts | Import & Local Manufacturing | Wholesale Only</p>
+            <button class="btn-primary" onclick="showPage('shop')">VIEW PRODUCTS</button>
+            <button class="btn-primary btn-wholesale" onclick="showPage('register')">COMPANIES REGISTER</button>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <h2 class="section-title">ABOUT <span>MAN</span></h2>
+        <div class="divider"></div>
+        <div style="max-width: 800px; margin: 40px auto 0; text-align: center; color: #aaa;">
+            <p>MAN Car Accessories is a premier wholesale supplier specializing in high-quality automotive accessories. We import premium products from China and manufacture locally in Egypt using authentic materials like genuine leather, providing businesses with a reliable sourcing solution for their retail operations.</p>
+        </div>
+        <div class="stats-grid">
+            <div><div class="stat-number">50+</div><div class="stat-label">Products</div></div>
+            <div><div class="stat-number">500+</div><div class="stat-label">Partners</div></div>
+            <div><div class="stat-number">24/7</div><div class="stat-label">Support</div></div>
+            <div><div class="stat-number">Egypt</div><div class="stat-label">Nationwide Delivery</div></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">WHOLESALE <span>CATALOG</span></h2>
+        <div class="section-subtitle">Premium Quality at Competitive Wholesale Prices</div>
+        <div class="products-grid" id="featuredGrid"></div>
+        <div style="text-align: center; margin-top: 50px;">
+            <button class="btn-primary" onclick="showPage('shop')">VIEW ALL PRODUCTS →</button>
+        </div>
+    </section>
+    
+    <section class="companies-register-section">
+        <h2 class="section-title">COMPANIES <span>REGISTER</span></h2>
+        <div class="section-subtitle">Register Your Company Today</div>
+        <div style="max-width: 600px; margin: 0 auto; text-align: center; color: #aaa;">
+            <p>Wholesale pricing, bulk discounts, and dedicated account manager for registered companies.</p>
+        </div>
+        <div class="register-form">
+            <input type="text" id="regCompany" placeholder="Company Name">
+            <input type="text" id="regTaxId" placeholder="Tax ID / Commercial Registration">
+            <input type="text" id="regName" placeholder="Contact Person Name">
+            <input type="email" id="regEmail" placeholder="Business Email">
+            <input type="tel" id="regPhone" placeholder="Phone Number">
+            <select id="regCity">
+                <option value="">Select City</option>
+                <option>Cairo</option><option>Alexandria</option><option>Giza</option>
+                <option>Port Said</option><option>Suez</option><option>Luxor</option>
+            </select>
+            <textarea id="regMessage" rows="3" placeholder="Tell us about your business..."></textarea>
+            <button class="btn-primary btn-wholesale" onclick="submitCompanyRegistration()" style="width:100%;">REGISTER COMPANY</button>
+        </div>
+    </section>
+</div>
+
+<!-- SHOP PAGE -->
+<div id="shopPage" style="display: none;">
+    <section class="section" style="padding-top: 120px;">
+        <h2 class="section-title">WHOLESALE <span>CATALOG</span></h2>
+        <div class="section-subtitle">Wholesale Pricing - Minimum Order Quantity Applies</div>
+        <div id="productsGrid" class="products-grid"></div>
+        <div id="paginationControls" class="pagination" style="display: flex; justify-content: center; gap: 10px; margin-top: 40px;"></div>
+    </section>
+</div>
+
+<!-- CART PAGE -->
+<div id="cartPage" style="display: none;">
+    <div class="cart-container">
+        <h2 class="section-title">YOUR <span>CART</span></h2>
+        <div class="cart-header"><div>PRODUCT</div><div>PRICE (Wholesale)</div><div>QUANTITY</div><div>TOTAL</div><div></div></div>
+        <div id="cartItemsList"></div>
+        <div class="cart-summary">
+            <div class="cart-total">TOTAL: <span id="cartTotal">EGP 0</span></div>
+            <button class="btn-primary" onclick="showPage('checkout')">PROCEED TO CHECKOUT →</button>
+            <button class="btn-primary" onclick="showPage('quote')" style="margin-left: 15px; background: #1877F2; border-color: #1877F2;">REQUEST QUOTE</button>
+        </div>
+    </div>
+</div>
+
+<!-- CHECKOUT PAGE -->
+<div id="checkoutPage" style="display: none;">
+    <div class="checkout-container">
+        <h2 class="section-title">COMPANY <span>CHECKOUT</span></h2>
+        <div class="checkout-grid">
+            <div class="order-summary"><h3>Order Summary</h3><div id="orderSummary"></div><div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #333;"><div style="display: flex; justify-content: space-between;"><span>TOTAL</span><span id="checkoutTotal" style="color: #D4AF37;">EGP 0</span></div></div></div>
+            <div><form class="checkout-form" id="checkoutForm"><div class="form-row"><input type="text" id="companyName" placeholder="Company Name" required><input type="text" id="taxId" placeholder="Tax ID / Commercial Reg" required></div><div class="form-row"><input type="text" id="contactPerson" placeholder="Contact Person" required><input type="email" id="email" placeholder="Business Email" required></div><div class="form-row"><input type="tel" id="phone" placeholder="Phone" required><input type="text" id="city" placeholder="City" required></div><input type="text" id="address" placeholder="Business Address" required><select id="governorate" required><option value="">Select Governorate</option><option>Cairo</option><option>Alexandria</option><option>Giza</option><option>Port Said</option><option>Suez</option><option>Luxor</option><option>Aswan</option></select><div class="payment-group"><div class="payment-opt selected" data-payment="Bank Transfer"><span>🏦</span> Bank Transfer</div><div class="payment-opt" data-payment="Cash on Delivery"><span>💵</span> Cash on Delivery (Company)</div><div class="payment-opt" data-payment="Visa / Mastercard"><span>💳</span> Visa / Mastercard</div></div><button type="submit" class="btn-primary" style="width:100%;">PLACE ORDER</button></form></div>
+        </div>
+    </div>
+</div>
+
+<!-- QUOTE REQUEST PAGE -->
+<div id="quotePage" style="display: none;">
+    <div class="checkout-container">
+        <h2 class="section-title">REQUEST <span>BULK QUOTE</span></h2>
+        <div class="checkout-grid">
+            <div class="order-summary"><h3>Your Cart Items</h3><div id="quoteSummary"></div><div style="margin-top: 20px;"><div>Total Quantity: <span id="quoteTotalQty">0</span></div></div></div>
+            <div><form class="checkout-form" id="quoteForm"><div class="form-row"><input type="text" id="quoteCompany" placeholder="Company Name" required><input type="text" id="quoteTaxId" placeholder="Tax ID" required></div><div class="form-row"><input type="text" id="quoteContact" placeholder="Contact Person" required><input type="email" id="quoteEmail" placeholder="Business Email" required></div><div class="form-row"><input type="tel" id="quotePhone" placeholder="Phone" required><input type="text" id="quoteCity" placeholder="City" required></div><textarea id="quoteNotes" rows="3" placeholder="Any special requirements or target pricing?"></textarea><button type="submit" class="btn-primary" style="width:100%;">SEND QUOTE REQUEST</button></form></div>
+        </div>
+    </div>
+</div>
+
+<!-- TRACKING PAGE -->
+<div id="trackingPage" style="display: none;">
+    <div class="tracking-container">
+        <h2 class="section-title">TRACK <span>ORDER</span></h2>
+        <div class="tracking-card"><div class="tracking-input"><input type="text" id="trackingNumber" placeholder="Enter Order Number (e.g., MAN-1234)"><button class="btn-primary" onclick="trackOrder()">TRACK →</button></div><div id="trackingResult" style="display: none;"></div><div id="noOrderMessage" style="text-align: center; padding: 40px; color: #666; display: none;">❌ Order not found.</div></div>
+    </div>
+</div>
+
+<!-- COMPANIES REGISTER PAGE -->
+<div id="registerPage" style="display: none;">
+    <section class="section" style="padding-top: 120px;">
+        <h2 class="section-title">COMPANIES <span>REGISTER</span></h2>
+        <div class="section-subtitle">Register Your Company for Wholesale Access</div>
+        <div class="register-form" style="max-width: 600px; margin: 40px auto;">
+            <input type="text" id="fullRegCompany" placeholder="Company Name" required>
+            <input type="text" id="fullRegTaxId" placeholder="Tax ID / Commercial Registration Number" required>
+            <input type="text" id="fullRegName" placeholder="Contact Person Full Name" required>
+            <input type="text" id="fullRegPosition" placeholder="Position / Title" required>
+            <input type="email" id="fullRegEmail" placeholder="Business Email" required>
+            <input type="tel" id="fullRegPhone" placeholder="Phone Number" required>
+            <select id="fullRegCity" required>
+                <option value="">Select City</option>
+                <option>Cairo</option><option>Alexandria</option><option>Giza</option>
+                <option>Port Said</option><option>Suez</option><option>Luxor</option><option>Aswan</option>
+            </select>
+            <textarea id="fullRegMessage" rows="3" placeholder="Tell us about your business and estimated monthly volume..."></textarea>
+            <button class="btn-primary btn-wholesale" onclick="submitFullCompanyRegistration()" style="width:100%;">REGISTER COMPANY</button>
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div><div class="logo-wrapper" style="display: inline-block;" onclick="openVisionModal()"><div class="luxury-badge" style="width: 60px; height: 60px;"><div class="center-man" style="font-size: 14px;">MAN</div></div></div><p style="color: #666; font-size: 12px; margin-top: 15px;">Wholesale Supplier<br>Import & Local Manufacturing</p></div>
+        <div class="footer-col"><h4>COMPANY</h4><a onclick="openVisionModal()">Vision & Mission</a><a onclick="showPage('register')">Companies Register</a><a href="#">About Us</a></div>
+        <div class="footer-col"><h4>PRODUCTS</h4><a onclick="showPage('shop')">Wholesale Catalog</a><a onclick="showPage('quote')">Request Quote</a><a href="#">Custom Manufacturing</a></div>
+        <div class="footer-col"><h4>CONTACT</h4><a href="tel:+20123456789">+20 123 456 789</a><a href="mailto:wholesale@mancar.com">wholesale@mancar.com</a></div>
+    </div>
+    <div class="copyright"><p>© 2024 MAN CAR ACCESSORIES — WHOLESALE DIVISION</p></div>
+</footer>
+
+<div class="whatsapp-float" onclick="window.open('https://wa.me/20123456789?text=I%20am%20interested%20in%20wholesale%20partnership','_blank')">💬</div>
+
+<script>
+    // ============ WHOLESALE PRODUCTS DATABASE with PRICING ============
+    const products = [
+        { id: 1, name: "Premium Leather Steering Wheel Cover", category: "interior", wholesalePrice: 1250, moq: 50, icon: "🏎️", desc: "Genuine Italian leather, hand-stitched, available in 12 colors. Imported from China." },
+        { id: 2, name: "LED Ambient Lighting Kit", category: "electronics", wholesalePrice: 650, moq: 100, icon: "✨", desc: "64-color RGB lighting with app control. Bluetooth enabled. Made in China." },
+        { id: 3, name: "Carbon Fiber Mirror Covers", category: "exterior", wholesalePrice: 890, moq: 30, icon: "🔲", desc: "Authentic carbon fiber weave, UV protected. Imported." },
+        { id: 4, name: "4K Dash Cam Front+Rear", category: "electronics", wholesalePrice: 1590, moq: 25, icon: "📹", desc: "4K recording, night vision, parking monitor. Chinese import." },
+        { id: 5, name: "Genuine Leather Rolls (Per Meter)", category: "materials", wholesalePrice: 450, moq: 100, icon: "🧵", desc: "Egyptian manufactured premium leather. Various colors and textures. Local product." },
+        { id: 6, name: "Custom Leather Seat Covers", category: "interior", wholesalePrice: 1890, moq: 20, icon: "💺", desc: "Made in Egypt using local leather. Custom fit for all car models." },
+        { id: 7, name: "Chrome Window Trim Kit", category: "exterior", wholesalePrice: 520, moq: 50, icon: "✨", desc: "Stainless steel chrome trim. Imported from China." },
+        { id: 8, name: "Wireless Car Charger", category: "electronics", wholesalePrice: 480, moq: 100, icon: "🔋", desc: "15W fast charging. Imported." },
+        { id: 9, name: "Leather Dashboard Cover", category: "interior", wholesalePrice: 850, moq: 30, icon: "📺", desc: "Made in Egypt. Premium leather dashboard cover." },
+        { id: 10, name: "LED Headlight Bulbs", category: "exterior", wholesalePrice: 1890, moq: 40, icon: "💡", desc: "30000LM super bright. Chinese import." },
+        { id: 11, name: "Wireless CarPlay Adapter", category: "electronics", wholesalePrice: 890, moq: 50, icon: "📱", desc: "Convert wired to wireless CarPlay. Imported." },
+        { id: 12, name: "Alcantara Interior Kit", category: "interior", wholesalePrice: 2250, moq: 15, icon: "🛋️", desc: "Premium Alcantara material. Imported from Italy." },
+        { id: 13, name: "Leather Steering Wheel (Complete)", category: "interior", wholesalePrice: 1850, moq: 20, icon: "🏎️", desc: "Complete replacement steering wheel with leather wrapping. Made in Egypt." },
+        { id: 14, name: "Car Floor Mats (Leather)", category: "interior", wholesalePrice: 380, moq: 100, icon: "🔲", desc: "Custom fit leather floor mats. Egyptian manufactured." },
+        { id: 15, name: "Paint Protection Film", category: "exterior", wholesalePrice: 1250, moq: 30, icon: "🛡️", desc: "Premium PPF film. Imported from China." },
+        { id: 16, name: "Leather Gear Shift Cover", category: "interior", wholesalePrice: 220, moq: 200, icon: "⚙️", desc: "Hand-stitched leather cover. Made in Egypt." }
+    ];
+
+    let currentPage = 1;
+    const productsPerPage = 8;
+
+    // Cart Functions
+    function getCart() { return JSON.parse(localStorage.getItem('man_wholesale_cart') || '[]'); }
+    function saveCart(cart) { localStorage.setItem('man_wholesale_cart', JSON.stringify(cart)); updateCartCount(); }
+    function updateCartCount() { const cart = getCart(); const total = cart.reduce((s, i) => s + i.qty, 0); const countSpan = document.getElementById('cartCount'); if(countSpan) countSpan.innerText = total; }
+    function addToCart(id) { let cart = getCart(); const existing = cart.find(i => i.id === id); if(existing) existing.qty++; else cart.push({ id, qty: 1 }); saveCart(cart); showToast("✓ Added to cart (Wholesale pricing)"); renderCartPage(); }
+    function removeFromCart(id) { let cart = getCart(); cart = cart.filter(i => i.id !== id); saveCart(cart); renderCartPage(); }
+    function updateQty(id, change) { let cart = getCart(); const item = cart.find(i => i.id === id); if(item) { item.qty += change; if(item.qty <= 0) cart = cart.filter(i => i.id !== id); } saveCart(cart); renderCartPage(); }
+    function getCartDetails() { const cart = getCart(); const items = cart.map(c => { const p = products.find(pr => pr.id === c.id); return { ...c, product: p, subtotal: p.wholesalePrice * c.qty }; }); return { items, total: items.reduce((s, i) => s + i.subtotal, 0) }; }
+
+    function renderProductCard(p) {
+        const volumePrices = [
+            { qty: p.moq, price: p.wholesalePrice },
+            { qty: p.moq * 3, price: Math.round(p.wholesalePrice * 0.9) },
+            { qty: p.moq * 5, price: Math.round(p.wholesalePrice * 0.8) }
+        ];
+        return `<div class="product-card"><span class="moq-badge">MOQ: ${p.moq} pcs</span><div class="product-icon">${p.icon}</div><div class="product-info"><div class="product-cat">${p.category.toUpperCase()}</div><div class="product-title">${p.name}</div><div class="product-desc">${p.desc}</div><div class="wholesale-price"><div class="price-row"><span class="qty">MOQ (${p.moq}+):</span><span class="amount">EGP ${p.wholesalePrice.toLocaleString()}</span></div><div class="price-row"><span class="qty">Bulk (${p.moq*3}+):</span><span class="amount">EGP ${volumePrices[1].price.toLocaleString()}</span></div><div class="price-row"><span class="qty">Wholesale (${p.moq*5}+):</span><span class="amount">EGP ${volumePrices[2].price.toLocaleString()}</span></div></div><button class="btn-add" onclick="addToCart(${p.id})">ADD TO CART</button><button class="btn-add btn-quote" onclick="requestProductQuote(${p.id})">REQUEST BULK QUOTE</button></div></div>`;
+    }
+
+    function renderProducts() { const start = (currentPage - 1) * productsPerPage; const pageProducts = products.slice(start, start + productsPerPage); const grid = document.getElementById('productsGrid'); if(grid) grid.innerHTML = pageProducts.map(p => renderProductCard(p)).join(''); renderPagination(); }
+    function renderPagination() { const totalPages = Math.ceil(products.length / productsPerPage); const container = document.getElementById('paginationControls'); if(!container) return; let html = ''; for(let i = 1; i <= totalPages; i++) html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})" style="background: ${i === currentPage ? '#D4AF37' : '#222'}; color: ${i === currentPage ? '#0A0A0A' : '#FFF'}; border: none; padding: 8px 16px; margin: 0 5px; border-radius: 5px; cursor: pointer;">${i}</button>`; container.innerHTML = html; }
+    function goToPage(page) { currentPage = page; renderProducts(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    function renderFeatured() { const featured = products.slice(0, 4); const grid = document.getElementById('featuredGrid'); if(grid) grid.innerHTML = featured.map(p => renderProductCard(p)).join(''); }
+    
+    function renderCartPage() {
+        const container = document.getElementById('cartItemsList');
+        if(!container) return;
+        const { items, total } = getCartDetails();
+        if(items.length === 0) { container.innerHTML = '<div style="text-align:center; padding:60px; color:#666;">Your cart is empty.</div>'; document.getElementById('cartTotal').innerHTML = 'EGP 0'; return; }
+        container.innerHTML = items.map(item => `<div class="cart-item"><div class="cart-product"><div class="cart-img">${item.product.icon}</div><div><strong>${item.product.name}</strong><br><small style="color:#888;">MOQ: ${item.product.moq} pcs</small></div></div><div>EGP ${item.product.wholesalePrice.toLocaleString()}</div><div class="qty-control"><button class="qty-btn" onclick="updateQty(${item.id}, -1)">-</button><span>${item.qty}</span><button class="qty-btn" onclick="updateQty(${item.id}, 1)">+</button></div><div>EGP ${item.subtotal.toLocaleString()}</div><div><button class="remove-btn" onclick="removeFromCart(${item.id})">✕</button></div></div>`).join('');
+        document.getElementById('cartTotal').innerHTML = `EGP ${total.toLocaleString()}`;
+        updateOrderSummary();
+    }
+    
+    function updateOrderSummary() {
+        const container = document.getElementById('orderSummary');
+        const totalSpan = document.getElementById('checkoutTotal');
+        if(!container) return;
+        const { items, total } = getCartDetails();
+        if(items.length === 0) { container.innerHTML = '<div style="color:#ff5555;">Your cart is empty.</div>'; if(totalSpan) totalSpan.innerHTML = 'EGP 0'; return; }
+        container.innerHTML = items.map(item => `<div style="display:flex; justify-content:space-between; margin-bottom: 12px;"><span>${item.product.name} x${item.qty}</span><span>EGP ${item.subtotal.toLocaleString()}</span></div>`).join('');
+        if(totalSpan) totalSpan.innerHTML = `EGP ${total.toLocaleString()}`;
+    }
+
+    // Modal Functions
+    function openVisionModal() { document.getElementById('visionModal').style.display = 'flex'; }
+    function closeVisionModal() { document.getElementById('visionModal').style.display = 'none'; }
+
+    // Company Registration Functions
+    function submitCompanyRegistration() {
+        const company = document.getElementById('regCompany')?.value;
+        const email = document.getElementById('regEmail')?.value;
+        if(!company || !email) { showToast("Please fill company name and email"); return; }
+        showToast("✓ Registration request sent! We'll contact you within 24 hours.");
+        document.getElementById('regCompany').value = '';
+        document.getElementById('regTaxId').value = '';
+        document.getElementById('regName').value = '';
+        document.getElementById('regEmail').value = '';
+        document.getElementById('regPhone').value = '';
+        document.getElementById('regMessage').value = '';
+    }
+
+    function submitFullCompanyRegistration() {
+        const company = document.getElementById('fullRegCompany')?.value;
+        const email = document.getElementById('fullRegEmail')?.value;
+        if(!company || !email) { showToast("Please fill all required fields"); return; }
+        showToast("✓ Company Registration submitted! Welcome to MAN Wholesale.");
+        showPage('home');
+    }
+
+    function requestProductQuote(productId) {
+        const product = products.find(p => p.id === productId);
+        showToast(`Quote request for ${product.name} sent to our team.`);
+        showPage('quote');
+    }
+
+    function updateQuoteSummary() {
+        const container = document.getElementById('quoteSummary');
+        const totalQtySpan = document.getElementById('quoteTotalQty');
+        if(!container) return;
+        const { items, total } = getCartDetails();
+        const totalQty = items.reduce((s, i) => s + i.qty, 0);
+        if(items.length === 0) { container.innerHTML = '<div style="color:#888;">No items in cart. Add products to request a quote.</div>'; if(totalQtySpan) totalQtySpan.innerText = '0'; return; }
+        container.innerHTML = items.map(item => `<div style="display:flex; justify-content:space-between; margin-bottom: 12px;"><span>${item.product.name} x${item.qty}</span><span>EGP ${item.subtotal.toLocaleString()}</span></div>`).join('');
+        if(totalQtySpan) totalQtySpan.innerText = totalQty;
+    }
+
+    // Checkout & Quote Forms
+    function setupCheckout() {
+        const form = document.getElementById('checkoutForm');
+        if(!form) return;
+        document.querySelectorAll('.payment-opt').forEach(opt => { opt.addEventListener('click', function() { document.querySelectorAll('.payment-opt').forEach(o => o.classList.remove('selected')); this.classList.add('selected'); }); });
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const company = document.getElementById('companyName')?.value, email = document.getElementById('email')?.value, phone = document.getElementById('phone')?.value, address = document.getElementById('address')?.value, city = document.getElementById('city')?.value, gov = document.getElementById('governorate')?.value, payment = document.querySelector('.payment-opt.selected')?.dataset.payment;
+            const { items, total } = getCartDetails();
+            if(!company || !email || !phone || !address || !city || !gov) { showToast("Please complete all fields"); return; }
+            if(items.length === 0) { showToast("Your cart is empty"); return; }
+            const orderNum = 'MAN-' + Math.floor(Math.random() * 10000);
+            showToast(`Order #${orderNum} received! We'll send invoice within 24 hours.`);
+            localStorage.setItem('man_wholesale_cart', '[]');
+            updateCartCount();
+            showPage('home');
+        });
+    }
+
+    function setupQuoteForm() {
+        const form = document.getElementById('quoteForm');
+        if(!form) return;
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const company = document.getElementById('quoteCompany')?.value, email = document.getElementById('quoteEmail')?.value;
+            const { items, total } = getCartDetails();
+            if(!company || !email) { showToast("Please complete all fields"); return; }
+            if(items.length === 0) { showToast("Add products to cart first"); return; }
+            showToast(`Quote request sent! Our team will respond within 24 hours.`);
+            showPage('home');
+        });
+    }
+
+    // Tracking
+    window.trackOrder = function() {
+        const orderNum = document.getElementById('trackingNumber')?.value;
+        if(!orderNum) { showToast("Enter order number"); return; }
+        const orders = JSON.parse(localStorage.getItem('man_orders') || '[]');
+        const order = orders.find(o => o.orderNumber === orderNum);
+        const resultDiv = document.getElementById('trackingResult');
+        const noOrderDiv = document.getElementById('noOrderMessage');
+        if(!order) { if(resultDiv) resultDiv.style.display = 'none'; if(noOrderDiv) noOrderDiv.style.display = 'block'; return; }
+        if(noOrderDiv) noOrderDiv.style.display = 'none';
+        if(resultDiv) {
+            resultDiv.style.display = 'block';
+            const stages = ['Order Placed', 'Processing', 'In Warehouse', 'Shipped', 'Delivered'];
+            const currentStage = order.status || 0;
+            resultDiv.innerHTML = `<div style="background:#1A1A1A; padding:20px; border-radius:12px; margin-bottom:25px; text-align:center;"><p style="color:#D4AF37;">Order #${order.orderNumber}</p><p style="color:#888;">Placed on ${order.date}</p><p>Total: <strong>EGP ${order.total.toLocaleString()}</strong></p></div><div class="timeline">${stages.map((stage, idx) => `<div class="step ${idx <= currentStage ? 'active' : ''}"><div class="step-dot">${idx <= currentStage ? '✓' : '○'}</div><div style="font-size:11px;">${stage}</div></div>`).join('')}</div>`;
+        }
+    };
+
+    window.showPage = function(page) {
+        document.getElementById('homePage').style.display = page === 'home' ? 'block' : 'none';
+        document.getElementById('shopPage').style.display = page === 'shop' ? 'block' : 'none';
+        document.getElementById('cartPage').style.display = page === 'cart' ? 'block' : 'none';
+        document.getElementById('checkoutPage').style.display = page === 'checkout' ? 'block' : 'none';
+        document.getElementById('quotePage').style.display = page === 'quote' ? 'block' : 'none';
+        document.getElementById('trackingPage').style.display = page === 'tracking' ? 'block' : 'none';
+        document.getElementById('registerPage').style.display = page === 'register' ? 'block' : 'none';
+        if(page === 'cart') renderCartPage();
+        if(page === 'checkout') updateOrderSummary();
+        if(page === 'quote') updateQuoteSummary();
+        if(page === 'shop') { currentPage = 1; renderProducts(); }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    function switchToArabic() { window.location.href = 'arabic.html'; }
+    function showToast(msg) { const existing = document.querySelector('.toast'); if(existing) existing.remove(); const toast = document.createElement('div'); toast.className = 'toast'; toast.innerText = msg; document.body.appendChild(toast); setTimeout(() => toast.remove(), 3000); }
+
+    renderFeatured(); renderProducts(); renderCartPage(); updateCartCount(); setupCheckout(); setupQuoteForm();
+    window.onclick = function(event) { if(event.target === document.getElementById('visionModal')) closeVisionModal(); };
+</script>
+</body>
+</html>

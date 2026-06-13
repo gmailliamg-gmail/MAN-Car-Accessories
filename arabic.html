@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAN Car Accessories | بالجملة | إكسسوارات سيارات فاخرة مصر</title>
+    <meta name="description" content="مورد بالجملة لإكسسوارات السيارات الفاخرة في مصر. استيراد من الصين وتصنيع محلي. تسجيل الشركات فقط.">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Cairo', 'Segoe UI', sans-serif; background: #0A0A0A; color: #FFFFFF; line-height: 1.6; }
+        
+        /* Hero Section with Luxury SUV Background */
+        .hero { height: 100vh; background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 100%), url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1920&q=80'); background-size: cover; background-position: center 30%; background-attachment: fixed; position: relative; }
+        
+        .header { position: fixed; top: 0; width: 100%; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(12px); padding: 12px 40px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid rgba(212, 175, 55, 0.3); flex-wrap: wrap; }
+        .logo-wrapper { cursor: pointer; display: flex; align-items: center; gap: 15px; }
+        .luxury-badge { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(145deg, #1A1A1A, #0A0A0A); border: 2px solid #D4AF37; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .luxury-badge::before { content: ''; position: absolute; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=150&q=80'); background-size: cover; opacity: 0.4; }
+        .circular-text { position: absolute; width: 100%; height: 100%; animation: rotateText 20s linear infinite; }
+        @keyframes rotateText { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .circular-text svg { width: 100%; height: 100%; }
+        .center-man { position: absolute; z-index: 3; font-size: 20px; font-weight: 800; background: linear-gradient(135deg, #D4AF37, #FFD700); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .wholesale-badge { background: #D4AF37; color: #0A0A0A; padding: 4px 12px; border-radius: 20px; font-size: 10px; font-weight: 800; margin-right: 15px; }
+        .nav { display: flex; gap: 25px; align-items: center; flex-wrap: wrap; }
+        .nav a { color: #EAEAEA; text-decoration: none; font-size: 12px; font-weight: 500; transition: color 0.2s; cursor: pointer; }
+        .nav a:hover { color: #D4AF37; }
+        .btn-primary { background: transparent; border: 2px solid #D4AF37; padding: 12px 40px; color: #D4AF37; cursor: pointer; transition: all 0.4s; margin: 0 5px; }
+        .btn-primary:hover { background: #D4AF37; color: #0A0A0A; }
+        .btn-wholesale { background: #D4AF37; color: #0A0A0A; }
+        .section { padding: 80px 50px; }
+        .section-title { text-align: center; font-size: 42px; margin-bottom: 20px; }
+        .section-title span { color: #D4AF37; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; max-width: 1400px; margin: 0 auto; }
+        .product-card { background: #121212; border-radius: 16px; overflow: hidden; border: 1px solid #222; position: relative; transition: all 0.4s; }
+        .product-card:hover { transform: translateY(-5px); border-color: #D4AF37; }
+        .product-icon { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 80px; background: linear-gradient(145deg, #161616, #0E0E0E); }
+        .product-info { padding: 20px; }
+        .product-cat { font-size: 10px; color: #D4AF37; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+        .product-title { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+        .product-desc { font-size: 12px; color: #888; margin-bottom: 12px; }
+        .moq-badge { position: absolute; top: 15px; left: 15px; background: #D4AF37; color: #0A0A0A; padding: 4px 12px; border-radius: 20px; font-size: 10px; font-weight: 800; }
+        .wholesale-price { background: #1A1A1A; padding: 12px; border-radius: 8px; margin: 12px 0; }
+        .wholesale-price .price-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px; }
+        .btn-add { width: 100%; background: transparent; border: 1px solid #D4AF37; padding: 10px; color: #D4AF37; cursor: pointer; border-radius: 8px; margin-bottom: 8px; font-weight: 600; }
+        .btn-add:hover { background: #D4AF37; color: #0A0A0A; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 2000; justify-content: center; align-items: center; }
+        .modal-content { background: linear-gradient(145deg, #121212, #0A0A0A); border: 2px solid #D4AF37; border-radius: 30px; padding: 50px; max-width: 700px; width: 90%; position: relative; }
+        .modal-close { position: absolute; top: 15px; left: 20px; font-size: 28px; cursor: pointer; color: #D4AF37; }
+        .vision-mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .vm-card { background: #1A1A1A; padding: 20px; border-radius: 16px; border-right: 3px solid #D4AF37; }
+        @media (max-width: 768px) { .vision-mission-grid { grid-template-columns: 1fr; } }
+        .register-form { max-width: 600px; margin: 40px auto; }
+        .register-form input, .register-form select, .register-form textarea { width: 100%; padding: 14px; margin-bottom: 15px; background: #1A1A1A; border: 1px solid #333; color: white; border-radius: 8px; }
+        .footer { background: #080808; padding: 50px; border-top: 1px solid #D4AF37; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { color: #D4AF37; margin-bottom: 20px; }
+        .footer-col a { display: block; color: #888; text-decoration: none; margin-bottom: 10px; cursor: pointer; }
+        .whatsapp-float { position: fixed; bottom: 25px; left: 25px; background: #25D366; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; cursor: pointer; z-index: 100; }
+        .toast { position: fixed; bottom: 95px; left: 25px; background: #D4AF37; color: #0A0A0A; padding: 12px 24px; border-radius: 8px; font-weight: bold; z-index: 200; animation: slideIn 0.3s ease; }
+        @keyframes slideIn { from { transform: translateX(-100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        .cart-container, .checkout-container { max-width: 1100px; margin: 120px auto 80px; padding: 0 20px; }
+        .cart-summary { margin-top: 30px; text-align: left; padding: 25px; background: #111; border-radius: 12px; }
+        .cart-total { font-size: 24px; font-weight: 700; margin-bottom: 20px; }
+        .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #222; flex-wrap: wrap; gap: 10px; }
+        @media (max-width: 968px) { .header { flex-direction: column; gap: 10px; } .section { padding: 50px 20px; } .products-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 42px; } }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-wrapper" onclick="openVisionModal()">
+        <div class="luxury-badge">
+            <div class="circular-text">
+                <svg viewBox="0 0 100 100">
+                    <path id="circlePath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+                    <text font-family="'Cairo', sans-serif" font-weight="700" fill="#D4AF37" font-size="11">
+                        <textPath href="#circlePath" startOffset="50%" text-anchor="middle">MAN · CAR ACCESSORIES · MAN · CAR ACCESSORIES</textPath>
+                    </text>
+                </svg>
+            </div>
+            <div class="center-man">MAN</div>
+        </div>
+        <span class="wholesale-badge">بالجملة</span>
+    </div>
+    <div class="nav">
+        <a onclick="showPage('home')">الرئيسية</a>
+        <a onclick="showPage('shop')">المنتجات</a>
+        <a onclick="showPage('cart')">السلة (<span id="cartCount">0</span>)</a>
+        <a onclick="showPage('quote')">طلب عرض سعر</a>
+        <a onclick="showPage('register')">تسجيل الشركات</a>
+        <a onclick="switchToEnglish()">🇬🇧 ENGLISH</a>
+    </div>
+</header>
+
+<div id="visionModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeVisionModal()">&times;</span>
+        <h2 style="color:#D4AF37; text-align:center;">MAN CAR ACCESSORIES</h2>
+        <div class="vision-mission-grid">
+            <div class="vm-card"><h3>✨ رؤيتنا</h3><p>أن نصبح المورد الرئيسي بالجملة لإكسسوارات السيارات الفاخرة في مصر والشرق الأوسط، من خلال الجمع بين التصنيع الصيني المتميز والحرفية المصرية.</p></div>
+            <div class="vm-card"><h3>🎯 مهمتنا</h3><p>توفير منتجات عالية الجودة بأسعار تنافسية للشركات عبر الاستيراد من الصين والتصنيع المحلي في مصر باستخدام أفضل المواد مثل الجلود الطبيعية.</p></div>
+        </div>
+    </div>
+</div>
+
+<div id="homePage">
+    <section class="hero">
+        <div class="hero-content" style="position: absolute; bottom: 15%; left: 0; right: 0; text-align: center; padding: 0 20px;">
+            <div class="hero-badge" style="color:#D4AF37; font-size:12px; letter-spacing:5px; margin-bottom:20px;">مورد بالجملة</div>
+            <h1 style="font-size:72px;">MAN <span style="color:#D4AF37;">CAR ACCESSORIES</span></h1>
+            <p style="font-size:18px; opacity:0.8; margin-bottom:35px;">إكسسوارات سيارات فاخرة | استيراد وتصنيع محلي | للشركات فقط</p>
+            <button class="btn-primary" onclick="showPage('shop')">تصفح المنتجات</button>
+            <button class="btn-primary btn-wholesale" onclick="showPage('register')">تسجيل الشركات</button>
+        </div>
+    </section>
+    <section class="section section-dark" style="background:#0F0F0F;"><h2 class="section-title">عن <span>MAN</span></h2><div style="max-width:800px; margin:40px auto; text-align:center; color:#aaa;"><p>MAN Car Accessories مورد بالجملة متخصص في إكسسوارات السيارات الفاخرة. نستورد من الصين ونصنع محلياً باستخدام مواد أصلية مثل الجلود الطبيعية.</p></div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:30px; max-width:1000px; margin:40px auto 0; text-align:center;"><div><div style="font-size:48px; font-weight:800; color:#D4AF37;">50+</div><div style="font-size:12px;">منتج</div></div><div><div style="font-size:48px; font-weight:800; color:#D4AF37;">500+</div><div style="font-size:12px;">شريك</div></div><div><div style="font-size:48px; font-weight:800; color:#D4AF37;">24/7</div><div style="font-size:12px;">دعم</div></div></div></section>
+    <section class="section"><h2 class="section-title">كتالوج <span>الجملة</span></h2><div class="section-subtitle" style="text-align:center; color:#D4AF37; font-size:12px; margin-bottom:40px;">جودة فاخرة بأسعار الجملة</div><div class="products-grid" id="featuredGrid"></div><div style="text-align:center; margin-top:50px;"><button class="btn-primary" onclick="showPage('shop')">عرض جميع المنتجات →</button></div></section>
+    <section class="companies-register-section" style="background:#0A0A0A; padding:60px 50px; border-top:1px solid #D4AF37; border-bottom:1px solid #D4AF37;"><h2 class="section-title">تسجيل <span>الشركات</span></h2><div style="max-width:600px; margin:0 auto; text-align:center; color:#aaa;"><p>أسعار الجملة، خصومات الكميات، ومدير حساب مخصص للشركات المسجلة.</p></div><div class="register-form"><input type="text" id="regCompany" placeholder="اسم الشركة"><input type="text" id="regTaxId" placeholder="الرقم الضريبي / السجل التجاري"><input type="text" id="regName" placeholder="اسم المسؤول"><input type="email" id="regEmail" placeholder="البريد الإلكتروني للشركة"><input type="tel" id="regPhone" placeholder="رقم الهاتف"><button class="btn-primary btn-wholesale" onclick="submitCompanyRegistration()" style="width:100%;">تسجيل الشركة</button></div></section>
+</div>
+
+<div id="shopPage" style="display: none;"><section class="section" style="padding-top:120px;"><h2 class="section-title">كتالوج <span>الجملة</span></h2><div class="section-subtitle" style="text-align:center; color:#D4AF37; margin-bottom:40px;">أسعار الجملة - الحد الأدنى للطلب مطبق</div><div id="productsGrid" class="products-grid"></div><div id="paginationControls" class="pagination" style="display:flex; justify-content:center; gap:10px; margin-top:40px;"></div></section></div>
+<div id="cartPage" style="display: none;"><div class="cart-container"><h2 class="section-title">سلة <span>التسوق</span></h2><div id="cartItemsList"></div><div class="cart-summary"><div class="cart-total">الإجمالي: <span id="cartTotal">EGP 0</span></div><button class="btn-primary" onclick="showPage('checkout')">متابعة الدفع →</button><button class="btn-primary" onclick="showPage('quote')" style="margin-right:15px; background:#1877F2; border-color:#1877F2;">طلب عرض سعر</button></div></div></div>
+<div id="checkoutPage" style="display: none;"><div class="checkout-container"><h2 class="section-title">إتمام <span>الطلب</span></h2><div style="display:grid; grid-template-columns:1fr 1.2fr; gap:40px;"><div class="order-summary" style="background:#111; padding:25px; border-radius:16px;"><h3>ملخص الطلب</h3><div id="orderSummary"></div><div style="margin-top:20px; padding-top:15px; border-top:1px solid #333;"><div style="display:flex; justify-content:space-between;"><span>الإجمالي</span><span id="checkoutTotal" style="color:#D4AF37;">EGP 0</span></div></div></div><div><form class="checkout-form" id="checkoutForm"><div class="form-row" style="display:grid; grid-template-columns:1fr 1fr; gap:15px;"><input type="text" id="companyName" placeholder="اسم الشركة" required><input type="text" id="taxId" placeholder="الرقم الضريبي" required></div><div class="form-row"><input type="text" id="contactPerson" placeholder="اسم المسؤول" required><input type="email" id="email" placeholder="البريد الإلكتروني" required></div><div class="form-row"><input type="tel" id="phone" placeholder="الهاتف" required><input type="text" id="city" placeholder="المدينة" required></div><input type="text" id="address" placeholder="عنوان الشركة" required><button type="submit" class="btn-primary" style="width:100%;">تأكيد الطلب</button></form></div></div></div></div>
+<div id="quotePage" style="display: none;"><div style="max-width:1100px; margin:120px auto; padding:0 20px;"><h2 class="section-title">طلب <span>عرض سعر</span></h2><div style="display:grid; grid-template-columns:1fr 1.2fr; gap:40px;"><div class="order-summary" style="background:#111; padding:25px; border-radius:16px;"><h3>منتجات السلة</h3><div id="quoteSummary"></div><div style="margin-top:20px;">الكمية الإجمالية: <span id="quoteTotalQty">0</span></div></div><div><form id="quoteForm"><div class="form-row" style="display:grid; grid-template-columns:1fr 1fr; gap:15px;"><input type="text" id="quoteCompany" placeholder="اسم الشركة" required><input type="text" id="quoteTaxId" placeholder="الرقم الضريبي" required></div><div class="form-row"><input type="text" id="quoteContact" placeholder="اسم المسؤول" required><input type="email" id="quoteEmail" placeholder="البريد الإلكتروني" required></div><div class="form-row"><input type="tel" id="quotePhone" placeholder="الهاتف" required><input type="text" id="quoteCity" placeholder="المدينة" required></div><textarea id="quoteNotes" rows="3" placeholder="متطلبات خاصة أو السعر المستهدف..." style="width:100%; padding:14px; background:#1A1A1A; border:1px solid #333; color:white; border-radius:8px; margin-bottom:15px;"></textarea><button type="submit" class="btn-primary" style="width:100%;">إرسال طلب عرض السعر</button></form></div></div></div></div>
+<div id="registerPage" style="display: none;"><section class="section" style="padding-top:120px;"><h2 class="section-title">تسجيل <span>الشركات</span></h2><div class="section-subtitle" style="text-align:center; color:#D4AF37;">سجل شركتك للوصول إلى أسعار الجملة</div><div class="register-form"><input type="text" id="fullRegCompany" placeholder="اسم الشركة" required><input type="text" id="fullRegTaxId" placeholder="السجل التجاري / الرقم الضريبي" required><input type="text" id="fullRegName" placeholder="اسم المسؤول الكامل" required><input type="text" id="fullRegPosition" placeholder="المنصب" required><input type="email" id="fullRegEmail" placeholder="البريد الإلكتروني للشركة" required><input type="tel" id="fullRegPhone" placeholder="رقم الهاتف" required><select id="fullRegCity" required><option value="">اختر المدينة</option><option>القاهرة</option><option>الإسكندرية</option><option>الجيزة</option><option>بورسعيد</option><option>السويس</option><option>الأقصر</option></select><textarea id="fullRegMessage" rows="3" placeholder="أخبرنا عن نشاطك التجاري والحجم الشهري المتوقع..."></textarea><button class="btn-primary btn-wholesale" onclick="submitFullCompanyRegistration()" style="width:100%;">تسجيل الشركة</button></div></section></div>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div><div class="logo-wrapper" style="display:inline-block;" onclick="openVisionModal()"><div class="luxury-badge" style="width:60px; height:60px;"><div class="center-man" style="font-size:14px;">MAN</div></div></div><p style="color:#666; margin-top:15px;">مورد بالجملة<br>استيراد وتصنيع محلي</p></div>
+        <div class="footer-col"><h4>الشركة</h4><a onclick="openVisionModal()">الرؤية والرسالة</a><a onclick="showPage('register')">تسجيل الشركات</a></div>
+        <div class="footer-col"><h4>المنتجات</h4><a onclick="showPage('shop')">كتالوج الجملة</a><a onclick="showPage('quote')">طلب عرض سعر</a></div>
+        <div class="footer-col"><h4>تواصل</h4><a href="tel:+20123456789">+20 123 456 789</a><a href="mailto:wholesale@mancar.com">wholesale@mancar.com</a></div>
+    </div>
+    <div class="copyright"><p>© 2024 MAN CAR ACCESSORIES - قسم البيع بالجملة</p></div>
+</footer>
+<div class="whatsapp-float" onclick="window.open('https://wa.me/20123456789?text=مرحبا%20MAN%20Car%20Accessories','_blank')">💬</div>
+
+<script>
+    const products = [
+        { id: 1, name: "مقود جلد فاخر", category: "داخلية", wholesalePrice: 1250, moq: 50, icon: "🏎️", desc: "جلد إيطالي أصلي، مخيط يدوياً. مستورد من الصين." },
+        { id: 2, name: "إضاءة محيطية ليد", category: "إلكترونيات", wholesalePrice: 650, moq: 100, icon: "✨", desc: "64 لون مع تحكم بالتطبيق. صنع في الصين." },
+        { id: 3, name: "أغطية مرايا كربون فايبر", category: "خارجية", wholesalePrice: 890, moq: 30, icon: "🔲", desc: "نسيج كربون فايبر أصلي، مقاوم للأشعة فوق البنفسجية." },
+        { id: 4, name: "كاميرا dashcam 4K أمامي+خلفي", category: "إلكترونيات", wholesalePrice: 1590, moq: 25, icon: "📹", desc: "تسجيل 4K، رؤية ليلية، مراقبة أثناء الوقوف." },
+        { id: 5, name: "لفائف جلد طبيعي (بالمتر)", category: "مواد خام", wholesalePrice: 450, moq: 100, icon: "🧵", desc: "منتج مصري - جلد طبيعي عالي الجودة بألوان متعددة." },
+        { id: 6, name: "أغطية مقاعد جلد مخصصة", category: "داخلية", wholesalePrice: 1890, moq: 20, icon: "💺", desc: "صنع في مصر باستخدام جلد محلي. مقاس مخصص لجميع موديلات السيارات." },
+        { id: 7, name: "طقم كروم للنوافذ", category: "خارجية", wholesalePrice: 520, moq: 50, icon: "✨", desc: "ستانلس ستيل كروم. مستورد من الصين." },
+        { id: 8, name: "شاحن سيارة لاسلكي", category: "إلكترونيات", wholesalePrice: 480, moq: 100, icon: "🔋", desc: "شحن سريع 15W. مستورد." },
+        { id: 9, name: "غطاء تابلو جلد", category: "داخلية", wholesalePrice: 850, moq: 30, icon: "📺", desc: "صنع في مصر. غطاء تابلو جلد فاخر." },
+        { id: 10, name: "لمبات ليد أمامية", category: "خارجية", wholesalePrice: 1890, moq: 40, icon: "💡", desc: "30000LM سطوع فائق. استيراد صيني." },
+        { id: 11, name: "محول CarPlay لاسلكي", category: "إلكترونيات", wholesalePrice: 890, moq: 50, icon: "📱", desc: "تحويل CarPlay السلكي إلى لاسلكي. مستورد." },
+        { id: 12, name: "طقم ألكنتارا داخلي", category: "داخلية", wholesalePrice: 2250, moq: 15, icon: "🛋️", desc: "مادة ألكنتارا فاخرة. مستورد من إيطاليا." },
+        { id: 13, name: "مقود سيارة كامل (جلد)", category: "داخلية", wholesalePrice: 1850, moq: 20, icon: "🏎️", desc: "مقود كامل مع تغليف جلد. صنع في مصر." },
+        { id: 14, name: "حصيرة سيارة جلد", category: "داخلية", wholesalePrice: 380, moq: 100, icon: "🔲", desc: "حصيرة جلد بمقاس مخصص. صناعة مصرية." },
+        { id: 15, name: "فيلم حماية الطلاء", category: "خارجية", wholesalePrice: 1250, moq: 30, icon: "🛡️", desc: "فيلم PPF فاخر. مستورد من الصين." },
+        { id: 16, name: "غطاء ناقل حركة جلد", category: "داخلية", wholesalePrice: 220, moq: 200, icon: "⚙️", desc: "غطاء مخيط يدوياً من الجلد. صنع في مصر." }
+    ];
+    let currentPage = 1;
+    const productsPerPage = 8;
+    function getCart() { return JSON.parse(localStorage.getItem('man_wholesale_cart_ar') || '[]'); }
+    function saveCart(cart) { localStorage.setItem('man_wholesale_cart_ar', JSON.stringify(cart)); updateCartCount(); }
+    function updateCartCount() { const cart = getCart(); const total = cart.reduce((s, i) => s + i.qty, 0); const span = document.getElementById('cartCount'); if(span) span.innerText = total; }
+    function addToCart(id) { let cart = getCart(); const existing = cart.find(i => i.id === id); existing ? existing.qty++ : cart.push({ id, qty: 1 }); saveCart(cart); showToast("✓ تمت الإضافة"); renderCartPage(); }
+    function removeFromCart(id) { let cart = getCart(); cart = cart.filter(i => i.id !== id); saveCart(cart); renderCartPage(); }
+    function updateQty(id, change) { let cart = getCart(); const item = cart.find(i => i.id === id); if(item) { item.qty += change; if(item.qty <= 0) cart = cart.filter(i => i.id !== id); } saveCart(cart); renderCartPage(); }
+    function getCartDetails() { const cart = getCart(); const items = cart.map(c => { const p = products.find(pr => pr.id === c.id); return { ...c, product: p, subtotal: p.wholesalePrice * c.qty }; }); return { items, total: items.reduce((s, i) => s + i.subtotal, 0) }; }
+    function renderProductCard(p) { return `<div class="product-card"><span class="moq-badge">الحد الأدنى: ${p.moq} قطعة</span><div class="product-icon">${p.icon}</div><div class="product-info"><div class="product-cat">${p.category}</div><div class="product-title">${p.name}</div><div class="product-desc">${p.desc}</div><div class="wholesale-price"><div class="price-row"><span>سعر الجملة (MOQ):</span><span>EGP ${p.wholesalePrice.toLocaleString()}</span></div></div><button class="btn-add" onclick="addToCart(${p.id})">أضف إلى السلة</button></div></div>`; }
+    function renderProducts() { const start = (currentPage - 1) * productsPerPage; const pageProducts = products.slice(start, start + productsPerPage); const grid = document.getElementById('productsGrid'); if(grid) grid.innerHTML = pageProducts.map(p => renderProductCard(p)).join(''); renderPagination(); }
+    function renderPagination() { const totalPages = Math.ceil(products.length / productsPerPage); const container = document.getElementById('paginationControls'); if(!container) return; let html = ''; for(let i = 1; i <= totalPages; i++) html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})" style="background: ${i === currentPage ? '#D4AF37' : '#222'}; color: ${i === currentPage ? '#0A0A0A' : '#FFF'}; border: none; padding: 8px 16px; margin: 0 5px; border-radius: 5px; cursor: pointer;">${i}</button>`; container.innerHTML = html; }
+    function goToPage(page) { currentPage = page; renderProducts(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    function renderFeatured() { const featured = products.slice(0, 4); const grid = document.getElementById('featuredGrid'); if(grid) grid.innerHTML = featured.map(p => renderProductCard(p)).join(''); }
+    function renderCartPage() { const container = document.getElementById('cartItemsList'); if(!container) return; const { items, total } = getCartDetails(); if(items.length === 0) { container.innerHTML = '<div style="text-align:center; padding:60px; color:#666;">السلة فارغة</div>'; document.getElementById('cartTotal').innerHTML = 'EGP 0'; return; } container.innerHTML = items.map(item => `<div class="cart-item"><div style="display:flex; align-items:center; gap:15px;"><div style="width:50px; height:50px; background:#1A1A1A; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:24px;">${item.product.icon}</div><div><strong>${item.product.name}</strong><br><small style="color:#888;">MOQ: ${item.product.moq}</small></div></div><div>EGP ${item.product.wholesalePrice.toLocaleString()}</div><div class="qty-control" style="display:flex; align-items:center; gap:10px;"><button class="qty-btn" onclick="updateQty(${item.id}, -1)" style="background:#222; border:none; width:28px; height:28px; color:white; border-radius:5px; cursor:pointer;">-</button><span>${item.qty}</span><button class="qty-btn" onclick="updateQty(${item.id}, 1)" style="background:#222; border:none; width:28px; height:28px; color:white; border-radius:5px; cursor:pointer;">+</button></div><div>EGP ${item.subtotal.toLocaleString()}</div><button class="remove-btn" onclick="removeFromCart(${item.id})" style="background:none; border:none; color:#ff5555; cursor:pointer; font-size:18px;">✕</button></div>`).join(''); document.getElementById('cartTotal').innerHTML = `EGP ${total.toLocaleString()}`; updateOrderSummary(); }
+    function updateOrderSummary() { const container = document.getElementById('orderSummary'); const totalSpan = document.getElementById('checkoutTotal'); if(!container) return; const { items, total } = getCartDetails(); if(items.length === 0) { container.innerHTML = '<div style="color:#ff5555;">السلة فارغة</div>'; if(totalSpan) totalSpan.innerHTML = 'EGP 0'; return; } container.innerHTML = items.map(item => `<div style="display:flex; justify-content:space-between; margin-bottom:12px;"><span>${item.product.name} x${item.qty}</span><span>EGP ${item.subtotal.toLocaleString()}</span></div>`).join(''); if(totalSpan) totalSpan.innerHTML = `EGP ${total.toLocaleString()}`; }
+    function updateQuoteSummary() { const container = document.getElementById('quoteSummary'); const totalQtySpan = document.getElementById('quoteTotalQty'); if(!container) return; const { items, total } = getCartDetails(); const totalQty = items.reduce((s, i) => s + i.qty, 0); if(items.length === 0) { container.innerHTML = '<div style="color:#888;">لا توجد منتجات في السلة. أضف منتجات لطلب عرض سعر.</div>'; if(totalQtySpan) totalQtySpan.innerText = '0'; return; } container.innerHTML = items.map(item => `<div style="display:flex; justify-content:space-between; margin-bottom:12px;"><span>${item.product.name} x${item.qty}</span><span>EGP ${item.subtotal.toLocaleString()}</span></div>`).join(''); if(totalQtySpan) totalQtySpan.innerText = totalQty; }
+    function openVisionModal() { document.getElementById('visionModal').style.display = 'flex'; }
+    function closeVisionModal() { document.getElementById('visionModal').style.display = 'none'; }
+    function submitCompanyRegistration() { const company = document.getElementById('regCompany')?.value, email = document.getElementById('regEmail')?.value; if(!company || !email) { showToast("يرجى ملء اسم الشركة والبريد الإلكتروني"); return; } showToast("✓ تم إرسال طلب التسجيل - سنتواصل معكم خلال 24 ساعة"); document.getElementById('regCompany').value = ''; document.getElementById('regTaxId').value = ''; document.getElementById('regName').value = ''; document.getElementById('regEmail').value = ''; document.getElementById('regPhone').value = ''; }
+    function submitFullCompanyRegistration() { const company = document.getElementById('fullRegCompany')?.value, email = document.getElementById('fullRegEmail')?.value; if(!company || !email) { showToast("يرجى ملء جميع الحقول المطلوبة"); return; } showToast("✓ تم تسجيل طلب الشراكة - سنتواصل معكم خلال 24 ساعة"); showPage('home'); }
+    function setupCheckout() { const form = document.getElementById('checkoutForm'); if(form) form.addEventListener('submit', (e) => { e.preventDefault(); const company = document.getElementById('companyName')?.value, email = document.getElementById('email')?.value; const { items } = getCartDetails(); if(!company || !email) { showToast("يرجى إكمال جميع الحقول"); return; } if(items.length === 0) { showToast("السلة فارغة"); return; } showToast("✓ تم استلام طلب الشراء - سنرسل الفاتورة خلال 24 ساعة"); localStorage.setItem('man_wholesale_cart_ar', '[]'); updateCartCount(); showPage('home'); }); }
+    function setupQuoteForm() { const form = document.getElementById('quoteForm'); if(form) form.addEventListener('submit', (e) => { e.preventDefault(); const company = document.getElementById('quoteCompany')?.value, email = document.getElementById('quoteEmail')?.value; const { items } = getCartDetails(); if(!company || !email) { showToast("يرجى إكمال جميع الحقول"); return; } if(items.length === 0) { showToast("أضف منتجات إلى السلة أولاً"); return; } showToast("✓ تم إرسال طلب عرض السعر - سنرد خلال 24 ساعة"); showPage('home'); }); }
+    window.showPage = function(page) { document.getElementById('homePage').style.display = page === 'home' ? 'block' : 'none'; document.getElementById('shopPage').style.display = page === 'shop' ? 'block' : 'none'; document.getElementById('cartPage').style.display = page === 'cart' ? 'block' : 'none'; document.getElementById('checkoutPage').style.display = page === 'checkout' ? 'block' : 'none'; document.getElementById('quotePage').style.display = page === 'quote' ? 'block' : 'none'; document.getElementById('registerPage').style.display = page === 'register' ? 'block' : 'none'; if(page === 'cart') renderCartPage(); if(page === 'checkout') updateOrderSummary(); if(page === 'quote') updateQuoteSummary(); if(page === 'shop') { currentPage = 1; renderProducts(); } window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    function switchToEnglish() { window.location.href = 'index.html'; }
+    function showToast(msg) { const existing = document.querySelector('.toast'); if(existing) existing.remove(); const toast = document.createElement('div'); toast.className = 'toast'; toast.innerText = msg; document.body.appendChild(toast); setTimeout(() => toast.remove(), 3000); }
+    renderFeatured(); renderProducts(); renderCartPage(); updateCartCount(); setupCheckout(); setupQuoteForm();
+    window.onclick = function(event) { if(event.target === document.getElementById('visionModal')) closeVisionModal(); };
+</script>
+</body>
+</html>
